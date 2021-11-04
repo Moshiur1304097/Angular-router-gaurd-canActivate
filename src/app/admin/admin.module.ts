@@ -14,6 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { MatSortModule } from '@angular/material/sort';
       AddUserComponent,
       AddProductComponent,
       ListComponent,
+      ConfirmDialogComponent,
      
     ],
   imports: [

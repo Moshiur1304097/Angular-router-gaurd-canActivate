@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-add-user',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddUserComponent implements OnInit {
 
-  constructor() { }
+form: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      name: new FormControl(''),
+      email: new FormControl(''),
+    });
+   }
 
   ngOnInit(): void {
   }
 
+    isDataSaved(): boolean{
+      return !this.form.dirty;
+    }
 }
