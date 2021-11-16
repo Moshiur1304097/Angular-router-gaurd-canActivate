@@ -6,7 +6,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { ListComponent } from './list/list.component';
 import { RouterModule } from '@angular/router';
 import { AdminRoutingModule } from './admin-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -38,6 +38,9 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatSortModule,
     MatDialogModule,
     AdminRoutingModule,
+    FormGroup,
+    FormsModule,
+    RouterModule
   ]
 })
 export class AdminModule { }
