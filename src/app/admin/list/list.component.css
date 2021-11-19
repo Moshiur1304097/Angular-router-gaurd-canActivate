@@ -1,4 +1,7 @@
 .full-width-table {
     width: 100%;
   }
-  
+.paddingSpace{
+  padding-left: 20px;
+  padding-right: 20px;
+  }

@@ -16,21 +16,28 @@ const routes: Routes = [
         path: '',
         // canActivateChild: [PermissionsGuard],
         canActivate:[AuthenticationGuard],
-        canActivateChild:[PermissionsGuard],
         children: [
-          {
-            path: 'add-user',
-            // canActivate:[PermissionsGuard],
-            component: AddUserComponent,
+         {
+           path:'', 
+           canActivateChild:[PermissionsGuard],
+           children:[
+            {
+              path: 'add-user',
+              // canActivate:[PermissionsGuard],
+              component: AddUserComponent,
+            },
+            {
+              path: 'add-product',
+              // canActivate:[PermissionsGuard],
+              component: AddProductComponent,
+            },
+           ]
           },
-          {
-            path: 'add-product',
-            // canActivate:[PermissionsGuard],
-            component: AddProductComponent,
+          { 
+           path: 'list', component: ListComponent,
           },
         ],
       },
-      { path: 'list', component: ListComponent },
     ],
   },
 ];
