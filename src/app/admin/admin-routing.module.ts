@@ -16,17 +16,16 @@ const routes: Routes = [
         path: '',
         // canActivateChild: [PermissionsGuard],
         canActivate:[AuthenticationGuard],
+        canActivateChild:[PermissionsGuard],
         children: [
           {
             path: 'add-user',
-            canActivate:[PermissionsGuard],
-            // canDeactivate: [FormGuardGuard],
+            // canActivate:[PermissionsGuard],
             component: AddUserComponent,
           },
           {
             path: 'add-product',
-            canActivate:[PermissionsGuard],
-            // canDeactivate: [FormGuardGuard],
+            // canActivate:[PermissionsGuard],
             component: AddProductComponent,
           },
         ],
