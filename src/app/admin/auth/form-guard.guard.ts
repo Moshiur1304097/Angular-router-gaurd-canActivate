@@ -31,7 +31,7 @@ export class FormGuardGuard implements CanDeactivate<unknown> {
         //   return false;
         // }
 
-        if(component.form.dirty){
+        if(!component.isDataSaved()){
           const dialogRef= this.dialog.open(ConfirmDialogComponent);
           return dialogRef.afterClosed();
         }

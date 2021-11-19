@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { SaveData } from '../auth/save-data-interface';
 
 @Component({
   selector: 'app-add-user',
@@ -7,7 +8,7 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./add-user.component.css'],
   changeDetection:ChangeDetectionStrategy.OnPush,
 })
-export class AddUserComponent implements OnInit {
+export class AddUserComponent implements OnInit, SaveData {
 
 form: FormGroup;
 

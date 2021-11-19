@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { SaveData } from '../auth/save-data-interface';
 
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
   styleUrls: ['./add-product.component.css']
 })
-export class AddProductComponent implements OnInit {
+export class AddProductComponent implements OnInit, SaveData {
   
 
 
@@ -16,6 +17,9 @@ export class AddProductComponent implements OnInit {
       name: new FormControl(''),
       quantity: new FormControl(0),
     });
+  }
+  isDataSaved(): boolean {
+    return !this.form.dirty;
   }
 
  
