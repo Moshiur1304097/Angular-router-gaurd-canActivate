@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ActivatedRouteSnapshot, CanDeactivate, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { CanDeactivate, UrlTree } from '@angular/router';
 import { Observable, of } from 'rxjs';
-import { AddProductComponent } from '../add-product/add-product.component';
-import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
+import { AddProductComponent } from '../admin/add-product/add-product.component';
+import { ConfirmDialogComponent } from '../admin/confirm-dialog/confirm-dialog.component';
 
 @Injectable({
   providedIn: 'root'
